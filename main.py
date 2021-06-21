@@ -23,7 +23,7 @@ class KeywordQueryEventListener(EventListener):
         query = event.get_argument()
         logger.info("preferences %s" % json.dumps(extension.preferences))
         result = subprocess.run(
-            ["gnome-calculator", "-s", query], stdout=subprocess.PIPE, text=True
+            ["mate-calculator", "-s", query], stdout=subprocess.PIPE, text=True
         ).stdout
         items = [
             ExtensionResultItem(
@@ -31,7 +31,7 @@ class KeywordQueryEventListener(EventListener):
                 name=result,
                 description="Enter to copy to the clipboard\nAlt-enter to open in calculator",
                 on_enter=CopyToClipboardAction(result.rstrip("\n")),
-                on_alt_enter=RunScriptAction("gnome-calculator -e '%s'" % query),
+                on_alt_enter=RunScriptAction("mate-calculator -s '%s'" % query),
             )
         ]
 
