@@ -1,8 +1,8 @@
 {
   "required_api_version": "^2.0.0",
-  "name": "Gnome Calculator",
+  "name": "Mate Calculator",
   "description": "Query results from Gnome calculator",
-  "developer_name": "Doeke Buursma",
+  "developer_name": "Bhupesh Varshney",
   "icon": "images/icon.svg",
   "options": {
     "query_debounce": 0.05
@@ -11,7 +11,7 @@
     {
       "id": "calculator_kw",
       "type": "keyword",
-      "name": "Gnome Calculator",
+      "name": "Mate Calculator",
       "default_value": "calc"
     }
   ]
